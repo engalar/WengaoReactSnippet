@@ -8,7 +8,7 @@
     <icon/>
     <properties>
         <propertyGroup caption="General">
-            <property key="customCode" type="string" required="false">
+            <property key="customCode" type="string" required="false" multiline="true">
                 <caption>Custom Code</caption>
                 <description>My widget description</description>
             </property>

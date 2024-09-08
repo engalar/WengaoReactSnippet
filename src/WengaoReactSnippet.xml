@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="wengao.wengaoreactsnippet.WengaoReactSnippet" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Wengao React Snippet</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="customCode" type="string" required="false">
+                <caption>Custom Code</caption>
+                <description>My widget description</description>
+            </property>
+            <property key="content" type="widgets" required="false">
+                <caption>Custom Code 2</caption>
+                <description>My widget description</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

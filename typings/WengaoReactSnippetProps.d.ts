@@ -4,6 +4,8 @@
  * @author Mendix Widgets Framework Team
  */
 import { ComponentType, CSSProperties, ReactNode } from "react";
+import { DynamicValue, EditableValue, FileValue } from "mendix";
+import { Big } from "big.js";
 
 export interface WengaoReactSnippetContainerProps {
     name: string;
@@ -12,6 +14,9 @@ export interface WengaoReactSnippetContainerProps {
     tabIndex?: number;
     customCode: string;
     content?: ReactNode;
+    isDelay: boolean;
+    file?: DynamicValue<FileValue>;
+    attribute?: EditableValue<Big | any | boolean | Date | string>;
 }
 
 export interface WengaoReactSnippetPreviewProps {
@@ -26,4 +31,7 @@ export interface WengaoReactSnippetPreviewProps {
     renderMode?: "design" | "xray" | "structure";
     customCode: string;
     content: { widgetCount: number; renderer: ComponentType<{ children: ReactNode; caption?: string }> };
+    isDelay: boolean;
+    file: string;
+    attribute: string;
 }

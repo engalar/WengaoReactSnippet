@@ -4,18 +4,42 @@
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Wengao React Snippet</name>
-    <description>My widget description</description>
+    <description></description>
     <icon/>
     <properties>
         <propertyGroup caption="General">
             <property key="customCode" type="string" required="false" multiline="true">
                 <caption>Custom Code</caption>
-                <description>My widget description</description>
+                <description></description>
             </property>
             <property key="content" type="widgets" required="false">
-                <caption>Custom Code 2</caption>
-                <description>My widget description</description>
+                <caption>Custom Code</caption>
+                <description></description>
             </property>
+            <property key="isDelay" type="boolean" required="true" defaultValue="true">
+                <caption>Is Delay</caption>
+                <description></description>
+            </property>
+            <property key="file" type="file" required="false">
+              <caption>File</caption>
+              <description></description>
+            </property>
+            <property key="attribute" type="attribute" required="false">
+                    <caption>Attribute</caption>
+                    <description />
+                    <attributeTypes>
+                        <attributeType name="AutoNumber" />
+                        <attributeType name="Binary" />
+                        <attributeType name="Boolean" />
+                        <attributeType name="DateTime" />
+                        <attributeType name="Enum" />
+                        <attributeType name="HashString" />
+                        <attributeType name="Integer" />
+                        <attributeType name="Long" />
+                        <attributeType name="String" />
+                        <attributeType name="Decimal" />
+                    </attributeTypes>
+                </property>
         </propertyGroup>
     </properties>
 </widget>

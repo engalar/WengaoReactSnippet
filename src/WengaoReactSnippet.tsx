@@ -1,13 +1,19 @@
-import { ReactElement, createElement, useEffect, createRef } from "react";
+import { ReactElement, createElement, useEffect, createRef, useRef } from "react";
 
 import { WengaoReactSnippetContainerProps } from "../typings/WengaoReactSnippetProps";
 
 import "./ui/WengaoReactSnippet.css";
 
-export function WengaoReactSnippet({ customCode, content }: WengaoReactSnippetContainerProps): ReactElement {
+export function WengaoReactSnippet({ customCode, content, attribute, isDelay, file }: WengaoReactSnippetContainerProps): ReactElement {
   const ref = createRef<HTMLDivElement>();
+  const attributeRef = useRef<any>();
+  attributeRef.current = attribute;
   useEffect(() => {
     const hostElement = ref.current!;
+    if (!isDelay) {
+      eval(customCode);
+      return;
+    }
     const mutationObserver = new MutationObserver(() => {
       try {
         eval(customCode);
@@ -17,7 +23,7 @@ export function WengaoReactSnippet({ customCode, content }: WengaoReactSnippetCo
       }
       mutationObserver.disconnect();
     });
-    mutationObserver.observe(hostElement, { childList: true });
+    mutationObserver.observe(hostElement, { childList: true, subtree: true });
     return () => {
       mutationObserver.disconnect();
     };
